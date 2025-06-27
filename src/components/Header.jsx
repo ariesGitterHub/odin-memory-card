@@ -9,15 +9,12 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.innerHeaderContainer}>
-        <Image
-          src={imgLogo}
-          alt="XXXX Logo"
-          className={styles.headerLogo}
-        />
+        <Image src={imgLogo} alt="XXXX Logo" className={styles.headerLogo} />
         <div className={styles.textContainer}>
           <h1>Mystical Memory Game</h1>
           <p>{MMM}</p>
         </div>
+        <Image src={imgLogo} alt="XXXX Logo" className={styles.headerLogo} />
       </div>
     </header>
   );

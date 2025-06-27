@@ -1,39 +1,39 @@
 export const cardData = [
   {
     id: 1,
-    imageUrl: "One",
+    imageUrl: "",
   },
   {
     id: 2,
-    imageUrl: "Two",
+    imageUrl: "",
   },
-  {
-    id: 3,
-    imageUrl: "Three",
-  },
-  {
-    id: 4,
-    imageUrl: "Four",
-  },
-  {
-    id: 5,
-    imageUrl: "Five",
-  },
-  {
-    id: 6,
-    imageUrl: "Six",
-  },
-  {
-    id: 7,
-    imageUrl: "Seven",
-  },
-  {
-    id: 8,
-    imageUrl: "Eight",
-  },
-  {
-    id: 9,
-    imageUrl: "Nine",
-  },
+  // {
+  //   id: 3,
+  //   imageUrl: "",
+  // },
+  // {
+  //   id: 4,
+  //   imageUrl: "",
+  // },
+  // {
+  //   id: 5,
+  //   imageUrl: "",
+  // },
+  // {
+  //   id: 6,
+  //   imageUrl: "",
+  // },
+  // {
+  //   id: 7,
+  //   imageUrl: "",
+  // },
+  // {
+  //   id: 8,
+  //   imageUrl: "",
+  // },
+  // {
+  //   id: 9,
+  //   imageUrl: "",
+  // },
   // Add more card data here
 ];

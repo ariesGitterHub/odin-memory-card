@@ -1,6 +1,7 @@
 header {
     width: 100vw;
     background-color:;
+    margin-top: 1rem;
     margin-bottom: 1rem;
     padding: 0.25rem;
   }
@@ -23,6 +24,11 @@ header {
     align-items: center;
     justify-content: center;
   }
+
+  .innerHeaderContainer img {
+    height: var(--header-logo);
+    width: auto;
+  }
   
   .textContainer {
     display: flex;
@@ -31,7 +37,7 @@ header {
     justify-content: center;
     color: var(--gold);
     font-family: var(--font-logo);
-    margin-left: 0.75rem;
+    margin: 0 0.75rem 0 0.75rem;
     text-transform: uppercase;
   }
   
