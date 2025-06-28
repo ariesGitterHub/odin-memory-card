@@ -12,7 +12,7 @@ export default function CardTile({ imageUrl }) {
     //console.log("Rendering imageUrl: ", imageUrl); // Log to see what value you're getting
     return (
       <div className="card-tile">
-        <img src={imageUrl} />
+        <img src={imageUrl} alt="Random Tarot card"/>
       </div>
     );
   }

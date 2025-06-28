@@ -3,8 +3,8 @@
   /* COLORS */
   --white: #ede2e2;
  --black: #0c0606;
- --red: #7e4c4c;
- --gold: #c9bd79;
+ --red: #581919;
+ --gold: #c6bd86;
 
   /* FONTS */
   --font-logo: "amarante", sans-serif;
@@ -81,23 +81,25 @@ button {
   flex-wrap: wrap;  
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  /* gap: 1rem; */
+  margin: 0.25rem
 }
 
 .card-tile {
-  height: 8rem;
-  width: 5rem;
+  height: fit-content;
+  width: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* background-color: var(--black); */
+  background: transparent;
   /* border-radius: 0.125rem; */
   transition: transform 0.3s ease;
     color: var(--gold);
-  font-size: 1rem;
-  padding: 0.5rem;
-  
+  /* font-size: 1rem; */
+  object-fit: cover;
+  margin: 0.25rem;
+  padding: 0rem;
 }
 
 .card-tile p {
@@ -105,12 +107,19 @@ button {
 }
 
 .card-tile:hover {
-  transform: translateY(-5px);
+  /* transform: translateY(-5px); */
+  box-shadow: 5px 5px 50px 20px var(--white);
+  transform: scale(1.1);
+}
+
+.card-tile:active {
+  /* transform: translateY(-5px); */
+  transform: scale(0.9);
 }
 
 img {
-  height: 100%;
-  width: auto;
+  height: 8rem;
+  width: 4rem;
 }
 
 
@@ -121,9 +130,9 @@ img {
     --header-MMM-size: 1rem;
     --header-logo: 2.75rem;
   }
-  .card-tile {
+  img {
     height: 13rem;
-    width: 8rem;
+    width: 6.5rem;
   }
 }
 
@@ -133,9 +142,9 @@ img {
     --header-MMM-size: 1.25rem;
     --header-logo: 4.5rem;
   }
-  .card-tile {
+  img {
     height: 21rem;
-    width: 13rem;
+    width: 10.5rem;
   }
 }
 
@@ -145,8 +154,8 @@ img {
     --header-MMM-size: 1.5rem;
     --header-logo: 5rem;
   }
-  .card-tile {
+  img {
     height: 32rem;
-    width: 21rem;
+    width: 16rem;
   }
 }
