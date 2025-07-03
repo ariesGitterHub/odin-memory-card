@@ -46,7 +46,15 @@ export default function CardTile({ imageUrl, imageCardName, handleClickedCards, 
       //   isFlipping ? styles.flipping : ""
       // } card-tile card-img`}
       className={`${isFlipping ? "flipping" : ""} card-tile card-img`}
+      tabIndex={0}
+      role="button"
       onClick={handleClickedCards}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault(); // space scroll prevention
+          handleClickedCards();
+        }
+      }}
     >
       <div className="card-inner">
         <div className="card-front">
@@ -54,7 +62,7 @@ export default function CardTile({ imageUrl, imageCardName, handleClickedCards, 
         </div>
         {/* <div className={styles.cardBack}> */}
         <div className="card-back">
-          <Image src={imgCardBack} alt="card back" />
+          <Image src={imgCardBack} alt="Tarot card back" />
         </div>
       </div>
     </div>

@@ -42,8 +42,25 @@ img {
     width: var(--card-img-w);
     background: transparent;
     margin: 0.25rem;
+    object-fit: contain;
     transition: transform 0.5s ease;
 }
+
+.card-tile:focus-visible {
+  outline: 0.125rem dashed red;
+  outline-offset: 0.125rem;
+}
+
+
+.card-img:hover {  
+  transition: box-shadow 0.9s ease;
+  box-shadow: 5px 5px 100px 5px var(--gold);
+}
+
+.card-img:active {
+  transform: scale(0.9);
+}
+
 
 .card-inner {
   width: 100%;
