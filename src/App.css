@@ -8,5 +8,107 @@
   justify-content: center;
 }
 
+.directions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-family: var(--font-logo);
+  font-size: var(--header-MMM-size);
+  /* margin: 0.5rem; */
+  text-align: center;
+  text-transform: uppercase;
+}
 
+img {
+  height: var(--card-img-h);
+  width: var(--card-img-w);
+   object-fit: cover;
+   transition: transform 0.5s ease;
+}
 
+img:hover {
+  transition: box-shadow 0.5s ease;
+  box-shadow: 5px 5px 100px 5px var(--gold);
+}
+
+img:active {
+  transform: scale(0.9);
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;  
+  align-items: center;
+  justify-content: center;
+  margin: 0.25rem
+}
+
+.card-tile-cheat {
+    height: var(--card-img-h);
+    width: var(--card-img-w);
+    background: transparent;
+    /* object-fit: cover; */
+    margin: 0.25rem;
+    transition: transform 0.5s ease;
+}
+
+.card-back-cheat {
+  margin-top: calc(var(--card-img-h) * -1);
+}
+
+@media (min-width: 500px) {
+  :root {
+    --header-title-size: 1.75rem;
+    --header-MMM-size: 1rem;
+    --header-logo: 3.25rem;
+  }
+  img, .card-tile-cheat {
+    height: calc(var(--card-img-h) + 5rem);
+    /* height: var(--card-img-h-500); */
+  }
+  .card-back-cheat {
+    margin-top: calc(-1 * (var(--card-img-h) + 5rem));
+  }
+  /* .card-back-cheat {
+    margin-top: calc(var(--card-img-h-500) * -10);
+  } */
+}
+
+@media (min-width: 800px) {
+  :root {
+    --header-title-size: 2.25rem;
+    --header-MMM-size: 1.25rem;
+    --header-logo: 4.5rem;
+  }
+  img, .card-tile-cheat {
+    height: calc(var(--card-img-h) + 13rem);
+    /* height: var(--card-img-h-800); */
+  }
+  .card-back-cheat {
+    margin-top: calc(-1 * (var(--card-img-h) + 13rem));
+  }
+  /* .card-back-cheat {
+    margin-top: calc(var(--card-img-h-800) * -1);
+  } */
+}
+
+@media (min-width: 1300px) {
+  :root {
+    --header-title-size: 2.5rem;
+    --header-MMM-size: 1.5rem;
+    --header-logo: 5rem;
+  }
+  img, .card-tile-cheat {
+    height: calc(var(--card-img-h) + 26rem);
+    /* height: var(--card-img-h-1300); */
+  }
+  .card-back-cheat {
+    margin-top: calc(-1 * (var(--card-img-h) + 26rem));
+  }
+  /* .card-back-cheat {
+    margin-top: calc(var(--card-img-h-1300) * -1);
+  } */
+}

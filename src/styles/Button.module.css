@@ -28,6 +28,6 @@
     box-shadow: 0 2px 10px var(--black);
     color: var(--gold);
     font-family: var(--font-logo);
-    font-size: 1.25rem;
+    font-size: var(--button-font-size);
   }
   

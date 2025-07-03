@@ -1,8 +1,7 @@
 header {
     width: 100vw;
-    /* background-color:; */
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.25rem;
     padding: 0.25rem;
   }
   
@@ -37,7 +36,7 @@ header {
     justify-content: center;
     color: var(--gold);
     font-family: var(--font-logo);
-    margin: 0 0.55rem 0 0.55rem;
+    margin: 0 0.45rem 0 0.45rem;
    }
 
   .textContainer h1 {

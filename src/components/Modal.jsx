@@ -1,15 +1,12 @@
-// Modal.jsx
-// import React from "react";
-// import "./Modal.css"; // Optional for custom styles
+import styles from "../styles/Modal.module.css"; //
 import Button from "../utils/Button";
 
-export default function Modal({ message, onClose, onReset }) {
+export default function Modal({ message, onReset }) {
   return (
-    <div className="modal-overlay">
-      <div className="modal">
+    <div className={styles.modalOverlay}>
+      <div className={styles.modal}>
         <h2>{message}</h2>
-        <div className="modal-actions">
-          {/* <Button onClick={onClose}>Close</Button> */}
+        <div className={styles.modalButtons}>
           <Button onClick={onReset}>Reset Game</Button>
         </div>
       </div>

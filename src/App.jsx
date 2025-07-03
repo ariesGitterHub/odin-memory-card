@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
+import "./App.css";
 import Header from "./components/Header";
 import ScoreBar from "./components/ScoreBar";
 import CardTile from "./utils/CardTile";
 import Modal from "./components/Modal";
-import imgCardBack from "./assets/cardBack.jpg";
-
 
 export default function App() {
   const [cardData, setCardData] = useState([]); // all 78
@@ -15,10 +14,15 @@ export default function App() {
   const [showModal, setShowModal] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
   // const [animateShuffle, setAnimateShuffle] = useState(false);
-  const [isFlipping, setIsFlipping] = useState(false);
+  // const [isFlipping, setIsFlipping] = useState(false);
+  const [flipTrigger, setFlipTrigger] = useState(false);
 
+const cardNumber = 4;
+ const rules =
+   "(Rules: one click per card, two clicks is a loss.)";
 
-  const cardNumber = 3;
+  const winMessage = "You clicked each card once, winning this round.";
+  const loseMessage = "Sorry, you clicked that last card twice, and lose this round.";
 
   const API_BASE = import.meta.env.DEV
     ? "/api"
@@ -62,7 +66,7 @@ export default function App() {
       const hasBeenClicked = prevClicked.has(cardId);
 
       if (hasBeenClicked) {
-        setModalMessage("Sorry, you lost...");
+        setModalMessage(loseMessage);
         setShowModal(true);
         setCurrentScore(0);
         return new Set(); // reset clicked state
@@ -71,10 +75,10 @@ export default function App() {
         updated.add(cardId);
         setCurrentScore((prevScore) => prevScore + 1);
         // setAnimateShuffle(true); // Trigger animation
-        setIsFlipping(true); // Trigger flip
+        setFlipTrigger(true); // Trigger flip
         reshuffleVisibleCards(); // shuffle same 3 cards in new order
         setTimeout(() => {
-          setIsFlipping(false); // Reset after animation
+          setFlipTrigger(false); // Reset after animation
         }, 600); // match .6s in CSS
         return updated;
       }
@@ -83,7 +87,7 @@ export default function App() {
 
   useEffect(() => {
     if (currentScore === cardNumber) {
-      setModalMessage("Congratulations, you won!");
+      setModalMessage(winMessage);
       setShowModal(true);
     }
   }, [currentScore]);
@@ -115,6 +119,9 @@ export default function App() {
   return (
     <div className="app-container">
       <Header />
+      <div className="directions">
+        <p>{rules}</p>
+      </div>
       <ScoreBar
         currentScore={currentScore}
         cardNumber={cardNumber}
@@ -127,7 +134,8 @@ export default function App() {
             <CardTile
               imageUrl={card.image}
               handleClickedCards={() => handleClickedCards(card.name)}
-              isFlipping={isFlipping}
+              // isFlipping={isFlipping}
+              isFlipping={flipTrigger}
             />
           </div>
         ))}
