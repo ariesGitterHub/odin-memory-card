@@ -25,7 +25,7 @@ header {
   }
 
   .innerHeaderContainer img {
-    height: var(--header-logo);
+    height: var(--header-logo-size);
     width: auto;
   }
   
@@ -36,7 +36,7 @@ header {
     justify-content: center;
     color: var(--gold);
     font-family: var(--font-logo);
-    margin: 0 0.45rem 0 0.45rem;
+    margin: 0 0.7rem 0 0.7rem;
    }
 
   .textContainer h1 {
@@ -44,6 +44,3 @@ header {
     text-transform: uppercase;
   }
   
-  .headerLogo {
-
-  }

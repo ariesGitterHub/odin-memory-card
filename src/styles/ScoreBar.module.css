@@ -9,10 +9,10 @@ background-color: var(--gold);
 margin-bottom: 1rem;
 }
 
-.scoreBarDiv img {
+/* .scoreBarDiv img {
     height: var(--header-logo);
     width: auto;
-}
+} */
 
 
 .textContainer {

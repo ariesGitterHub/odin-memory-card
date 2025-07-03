@@ -12,14 +12,25 @@
   --font-text: Arial, sans-serif;
 
   /* VARIABLES */
-  --header-title-size: 1rem;
-  --header-MMM-size: 0.65rem;
-  --header-logo: 2rem;
+  --base-title-size: 1rem;
+  --base-MMM-size: 0.725rem;
+  --base-rules-size: 0.65rem;
+  --base-logo-size: 2rem;
+
+  --500px-multiplier: 1.5;
+  --800px-multiplier: 2;
+  --1400px-multiplier: 3;
+
+  --header-title-size: var(--base-title-size);
+  --header-MMM-size: var(--base-MMM-size);
+  --header-rules-size: var(--base-rules-size);
+  --header-logo-size: var(--base-logo-size);
+  
   --card-img-h: 8rem;
-  /* --card-img-h-500: calc(var(--card-img-h) + 5rem);
-  --card-img-h-800: calc(var(--card-img-h) + 13rem);
-  --card-img-h-1300: calc(var(--card-img-h) + 26rem); */
   --card-img-w: calc(var(--card-img-h) * 0.5 + 0.125);
+  --500px-addition: 6rem;
+  --800px-addition: 12rem;
+  --1400px-addition: 24rem;
   --modal-font-size: 1.5rem;
   --button-font-size: 1.25rem;
 }

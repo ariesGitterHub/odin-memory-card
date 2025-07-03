@@ -33,26 +33,27 @@
 //   );
 // }
 
-import styles from "../styles/CardTile.module.css";
+// import styles from "../styles/CardTile.module.css";
 import Image from "./Image";
 import imgCardBack from "../assets/cardBack.jpg";
 
-export default function CardTile({ imageUrl, handleClickedCards, isFlipping }) {
+export default function CardTile({ imageUrl, imageCardName, handleClickedCards, isFlipping }) {
   return (
     <div
       // className={styles.cardTile}
       // className={`${styles.cardTile} ${isFlipping ? styles.flipping : ""}`}
-      className={`${styles.cardTile} ${
-        isFlipping ? styles.flipping : ""
-      } card-tile-cheat card-img`}
+      // className={`${styles.cardTile} ${
+      //   isFlipping ? styles.flipping : ""
+      // } card-tile card-img`}
+      className={`${isFlipping ? "flipping" : ""} card-tile card-img`}
       onClick={handleClickedCards}
     >
-      <div className={styles.cardInner}>
-        <div className={styles.cardFront}>
-          <Image src={imageUrl} alt="Card" />
+      <div className="card-inner">
+        <div className="card-front">
+          <Image src={imageUrl} alt={imageCardName} />
         </div>
         {/* <div className={styles.cardBack}> */}
-        <div className={`${styles.cardBack} card-back-cheat`}>
+        <div className="card-back">
           <Image src={imgCardBack} alt="card back" />
         </div>
       </div>

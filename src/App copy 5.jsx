@@ -13,6 +13,8 @@ export default function App() {
   const [highScore, setHighScore] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
+  // const [animateShuffle, setAnimateShuffle] = useState(false);
+  // const [isFlipping, setIsFlipping] = useState(false);
   const [flipTrigger, setFlipTrigger] = useState(false);
 
 const cardNumber = 9;
@@ -131,7 +133,6 @@ const cardNumber = 9;
           <div key={card.name}>
             <CardTile
               imageUrl={card.image}
-              imageCardName={card.name}
               handleClickedCards={() => handleClickedCards(card.name)}
               // isFlipping={isFlipping}
               isFlipping={flipTrigger}
