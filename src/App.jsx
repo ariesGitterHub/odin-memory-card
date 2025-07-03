@@ -17,7 +17,7 @@ export default function App() {
   // const [isFlipping, setIsFlipping] = useState(false);
   const [flipTrigger, setFlipTrigger] = useState(false);
 
-const cardNumber = 4;
+const cardNumber = 9;
  const rules =
    "(Rules: one click per card, two clicks is a loss.)";
 

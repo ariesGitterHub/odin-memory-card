@@ -28,14 +28,14 @@ img {
    transition: transform 0.5s ease;
 }
 
-img:hover {
+/* img:hover {
   transition: box-shadow 0.5s ease;
   box-shadow: 5px 5px 100px 5px var(--gold);
 }
 
 img:active {
   transform: scale(0.9);
-}
+} */
 
 .card-container {
   display: flex;
@@ -54,6 +54,12 @@ img:active {
     margin: 0.25rem;
     transition: transform 0.5s ease;
 }
+
+/* .card-tile-cheat:hover {
+    transition: box-shadow 0.5s ease;
+    box-shadow: 5px 5px 100px 5px var(--gold);
+
+} */
 
 .card-back-cheat {
   margin-top: calc(var(--card-img-h) * -1);

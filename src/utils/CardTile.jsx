@@ -44,7 +44,7 @@ export default function CardTile({ imageUrl, handleClickedCards, isFlipping }) {
       // className={`${styles.cardTile} ${isFlipping ? styles.flipping : ""}`}
       className={`${styles.cardTile} ${
         isFlipping ? styles.flipping : ""
-      } card-tile-cheat`}
+      } card-tile-cheat card-img`}
       onClick={handleClickedCards}
     >
       <div className={styles.cardInner}>
@@ -52,7 +52,7 @@ export default function CardTile({ imageUrl, handleClickedCards, isFlipping }) {
           <Image src={imageUrl} alt="Card" />
         </div>
         {/* <div className={styles.cardBack}> */}
-          <div className={`${styles.cardBack} card-back-cheat`}>
+        <div className={`${styles.cardBack} card-back-cheat`}>
           <Image src={imgCardBack} alt="card back" />
         </div>
       </div>

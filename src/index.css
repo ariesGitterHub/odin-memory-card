@@ -83,7 +83,14 @@ body {
   transition: outline 0.2s ease-in-out;
 }
 
+.card-img:hover {
+  transition: box-shadow 0.5s ease;
+  box-shadow: 5px 5px 100px 5px var(--gold);
+}
 
+.card-img:active {
+  transform: scale(0.9);
+}
 
 
 
