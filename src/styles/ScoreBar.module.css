@@ -1,27 +1,22 @@
 .scoreBarDiv {
-    width: 100%;
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-evenly;
-gap: 1rem;
-background-color: var(--gold);
-margin-bottom: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1rem;
+  background-color: var(--gold-lt);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-/* .scoreBarDiv img {
-    height: var(--header-logo);
-    width: auto;
-} */
-
-
 .textContainer {
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: center;
-gap: 0.5rem;
-color: var(--red);
-font-family: var(--font-logo);
-font-size: var(--header-title-size);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--red);
+  font-family: var(--font-logo);
+  font-size: var(--header-title-size);
 }

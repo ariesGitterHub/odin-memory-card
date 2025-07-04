@@ -1,6 +1,6 @@
 import styles from "../styles/Header.module.css";
-import Image from "../utils/Image";
 import imgLogo from "../assets/favIcon.svg";
+import Image from "../utils/Image";
 
 export default function Header() {
   const currentYear = new Date().getFullYear();

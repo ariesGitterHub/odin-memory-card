@@ -2,70 +2,54 @@
   height: fit-content;
   width: 100%;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
 
-.directions {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  color: var(--blue-lt);
-  font-family: var(--font-logo);
-  font-size: var(--header-rules-size);
-  /* margin: 0.5rem; */
-  text-align: center;
-  text-transform: uppercase;
-}
-
-img {
-  height: var(--card-img-h);
-  width: var(--card-img-w);
-   object-fit: cover;
-   transition: transform 0.5s ease;
-}
-
 .card-container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;  
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin: 1rem;
+  gap: 0.25rem;
+  background-color: transparent;
 }
 
 .card-tile {
-    height: var(--card-img-h);
-    width: var(--card-img-w);
-    background: transparent;
-    margin: 0.25rem;
-    object-fit: contain;
-    transition: transform 0.5s ease;
+  height: var(--card-img-h);
+  width: var(--card-img-w);
+  background: transparent;
+  margin: 0.25rem;
+  object-fit: contain;
+  /* NOTE: Below allows the box-shadow to scale down too with :active */
+  transition: transform 0.2s ease, box-shadow 0.9s ease;
 }
 
 .card-tile:focus-visible {
-  outline: 0.125rem dashed red;
+  outline: 0.25rem dashed var(--focus);
   outline-offset: 0.125rem;
 }
 
-
-.card-img:hover {  
+.card-tile:hover,
+.card-img:hover,
+.card-front:hover,
+.card-back:hover,
+.card-front img:hover,
+.card-back img:hover {
   transition: box-shadow 0.9s ease;
-  box-shadow: 5px 5px 100px 5px var(--gold);
+  box-shadow: 5px 5px 100px 5px var(--gold-lt);
 }
 
 .card-img:active {
   transform: scale(0.9);
 }
 
-
 .card-inner {
   width: 100%;
   height: 100%;
   position: relative;
+  background-color: transparent;
   transform-style: preserve-3d;
   transition: transform 0.6s ease;
 }
@@ -74,35 +58,53 @@ img {
   transform: rotateY(180deg);
 }
 
-.card-front, .card-back {
-      /* SEE HERE - THIS CODE BELOW MAKES ALL IMAGES VANISH */
-    /* position: absolute; */
-    /* width: 100%;
-    height: 100%; */
-    backface-visibility: hidden;
-    /* border-radius: 8px; */
-    overflow: hidden;
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: transparent;
+  overflow: hidden;
 }
 
 .card-back {
+  background-color: transparent;
   margin-top: calc(var(--card-img-h) * -1);
   transform: rotateY(180deg);
 }
 
+/* The actual images */
+.card-front img,
+.card-back img {
+  height: var(--card-img-h);
+  width: var(--card-img-w);
+}
+
+.modal-card-name {
+  color: var(--red);
+  text-transform: uppercase;
+}
+
+.modal-card-fortune,
+.modal-card-red {
+  color: var(--red);
+}
+
+.modal-card-fortune {
+  text-decoration: underline;
+}
+
 @media (min-width: 500px) {
   :root {
-    /* --header-title-size: 1.75rem;
-    --header-MMM-size: 1rem;
-    --header-logo: 3.25rem; */
-
     --header-title-size: calc(var(--base-title-size) * var(--500px-multiplier));
     --header-MMM-size: calc(var(--base-MMM-size) * var(--500px-multiplier));
     --header-rules-size: calc(var(--base-rules-size) * var(--500px-multiplier));
     --header-logo-size: calc(var(--base-logo-size) * var(--500px-multiplier));
   }
-  img, .card-tile {
+  .card-front img,
+  .card-back img,
+  .card-tile {
     height: calc(var(--card-img-h) + var(--500px-addition));
-    /* height: var(--card-img-h-500); */
   }
   .card-back {
     margin-top: calc(-1 * (var(--card-img-h) + var(--500px-addition)));
@@ -111,42 +113,38 @@ img {
 
 @media (min-width: 800px) {
   :root {
-    /* --header-title-size: 2.25rem;
-    --header-MMM-size: 1.25rem;
-    --header-logo: 4.5rem; */
-
     --header-title-size: calc(var(--base-title-size) * var(--800px-multiplier));
     --header-MMM-size: calc(var(--base-MMM-size) * var(--800px-multiplier));
     --header-rules-size: calc(var(--base-rules-size) * var(--800px-multiplier));
     --header-logo-size: calc(var(--base-logo-size) * var(--800px-multiplier));
   }
-  img, .card-tile {
+  .card-front img,
+  .card-back img,
+  .card-tile {
     height: calc(var(--card-img-h) + var(--800px-addition));
-    /* height: var(--card-img-h-800); */
   }
   .card-back {
     margin-top: calc(-1 * (var(--card-img-h) + var(--800px-addition)));
   }
-  /* .card-back {
-    margin-top: calc(var(--card-img-h-800) * -1);
-  } */
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1600px) {
   :root {
-    /* --header-title-size: 2.5rem;
-    --header-MMM-size: 1.5rem;
-    --header-logo: 5rem; */
-    --header-title-size: calc(var(--base-title-size) * var(--1400px-multiplier));
-    --header-MMM-size: calc(var(--base-MMM-size) * var(--1400px-multiplier));
-    --header-rules-size: calc(var(--base-rules-size) * var(--1400px-multiplier));
-    --header-logo-size: calc(var(--base-logo-size) * var(--1400px-multiplier));
+    --header-title-size: calc(
+      var(--base-title-size) * var(--1600px-multiplier)
+    );
+    --header-MMM-size: calc(var(--base-MMM-size) * var(--1600px-multiplier));
+    --header-rules-size: calc(
+      var(--base-rules-size) * var(--1600px-multiplier)
+    );
+    --header-logo-size: calc(var(--base-logo-size) * var(--1600px-multiplier));
   }
-  img, .card-tile {
-    height: calc(var(--card-img-h) + var(--1400px-addition));
-    /* height: var(--card-img-h-1400); */
+  .card-front img,
+  .card-back img,
+  .card-tile {
+    height: calc(var(--card-img-h) + var(--1600px-addition));
   }
   .card-back {
-    margin-top: calc(-1 * (var(--card-img-h) + var(--1400px-addition)));
+    margin-top: calc(-1 * (var(--card-img-h) + var(--1600px-addition)));
   }
 }

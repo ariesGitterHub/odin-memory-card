@@ -1,43 +1,51 @@
-
 .modalOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--red-trans);
-    z-index: 1000;
-  }
-  
-  .modal {
-    height: fit-content;
-    width: fit-content;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    background-color: var(--white);
-    border-radius: 1rem;
-    box-shadow: 0 2px 10px var(--black);
-    margin: 0.5rem;
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  .modal h2 {
-    color: var(--black);
-    font-family: var(--font-logo);
-    font-size: var(--modal-font-size);
-    text-transform: none;
-  }
-  
-  .modalButtons {
-    display: flex;
-    justify-content: center;
-    margin: 0.5rem;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--red-trans);
+  z-index: 1000;
+}
+
+.modal {
+  height: fit-content;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px var(--black);
+  margin: 1rem;
+  text-align: left;
+}
+
+.modal h2,
+.modal p {
+  color: var(--black);
+  font-family: var(--font-logo);
+  text-transform: none;
+}
+
+.modal h2 {
+  font-size: var(--modal-header-size);
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.modal p {
+  font-size: var(--modal-font-size);
+  padding: 0.5rem 1rem 0 1.65rem;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}

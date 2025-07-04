@@ -1,15 +1,18 @@
 :root {
   /* COLORS */
-  --white: #ede2e2;
- --black: #0c0606;
- --red: #6b3232;
- --red-trans: #58191980;
- --gold: #c6bd86;
- --blue-lt: #9EB1B8;
+  --white: #ddddcc;
+  --black: #1d1212;
+  --red: #924545;
+  --red-trans: #92454580;
+  --gold-lt: #c6bd86;
+  --gold: #edbd58;
+  /* --blue-lt: #9eb1b8; */
+  /* --blue-lt-trans: #9eb1b880; */
+  --focus: #fff700;
 
   /* FONTS */
   --font-logo: "amarante", sans-serif;
-  --font-text: Arial, sans-serif;
+  /* --font-text: Arial, sans-serif; */
 
   /* VARIABLES */
   --base-title-size: 1rem;
@@ -17,22 +20,24 @@
   --base-rules-size: 0.65rem;
   --base-logo-size: 2rem;
 
+  --modal-header-size: 2rem;
+  --modal-font-size: 1.5rem;
+  --button-font-size: 1.25rem;
+
   --500px-multiplier: 1.5;
   --800px-multiplier: 2;
-  --1400px-multiplier: 3;
+  --1600px-multiplier: 2.5;
 
   --header-title-size: var(--base-title-size);
   --header-MMM-size: var(--base-MMM-size);
   --header-rules-size: var(--base-rules-size);
   --header-logo-size: var(--base-logo-size);
-  
+
   --card-img-h: 8rem;
-  --card-img-w: calc(var(--card-img-h) * 0.5 + 0.125);
+  --card-img-w: calc(0.5 * (var(--card-img-h) + 0.125));
   --500px-addition: 6rem;
   --800px-addition: 12rem;
-  --1400px-addition: 24rem;
-  --modal-font-size: 1.5rem;
-  --button-font-size: 1.25rem;
+  --1600px-addition: 20rem;
 }
 
 *,
@@ -76,37 +81,3 @@ body {
   background: linear-gradient(5deg, var(--red), var(--black));
   line-height: 1.5;
 }
-
-/* h2 {
-  color: var(--gold);
-  font-family: var(--font-text);
-  font-size: 1rem;
-  text-transform: uppercase;
-} */
-
-/* button {
-  font: inherit;
-} */
-
-*:focus {
-  outline: 2px solid var(--red);
-  outline-offset: 1px;
-  transition: outline 0.2s ease-in-out;
-}
-
-.card-img:hover {  
-  transition: box-shadow 0.9s ease;
-  box-shadow: 5px 5px 100px 5px var(--gold);
-}
-
-.card-img:active {
-  transform: scale(0.9);
-}
-
-
-
-
-
-
-
-
