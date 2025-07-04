@@ -27,7 +27,7 @@ export default function App() {
 
   const [flipTrigger, setFlipTrigger] = useState(false);
 
-  const cardNumber = 9;
+  const cardNumber = 12;
   const clickedCardsArray = Array.from(clickedCards);
   const lastCardInSet = clickedCardsArray[clickedCardsArray.length - 1]; // The last card will be the winning card
   // const matchedCardFortune = cardMessages.find(

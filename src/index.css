@@ -15,10 +15,11 @@
   /* --font-text: Arial, sans-serif; */
 
   /* VARIABLES */
-  --base-title-size: 1rem;
-  --base-MMM-size: 0.725rem;
-  --base-rules-size: 0.65rem;
-  --base-logo-size: 2rem;
+  
+  --base-title-size: 1.125rem; /* was 1rem */
+  --base-MMM-size: 0.825rem; /* was 0.725rem */
+  --base-rules-size: 0.65rem; /* was 0.65rem */
+  --base-logo-size: 2.125rem; /* was 2rem */
 
   --modal-header-size: 2rem;
   --modal-font-size: 1.5rem;
@@ -33,7 +34,7 @@
   --header-rules-size: var(--base-rules-size);
   --header-logo-size: var(--base-logo-size);
 
-  --card-img-h: 8rem;
+  --card-img-h: 8.25rem;
   --card-img-w: calc(0.5 * (var(--card-img-h) + 0.125));
   --500px-addition: 6rem;
   --800px-addition: 12rem;
