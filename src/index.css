@@ -39,6 +39,8 @@
   --500px-addition: 4rem; /* was 6rem */
   --800px-addition: 8rem; /* was 12rem */
   --1600px-addition: 16rem; /* was 20rem */
+
+  --card-container-max-w: 1650px;
 }
 
 *,

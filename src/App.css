@@ -8,6 +8,7 @@
 }
 
 .card-container {
+  max-width: var(--card-container-max-w);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
