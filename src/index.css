@@ -34,11 +34,11 @@
   --header-rules-size: var(--base-rules-size);
   --header-logo-size: var(--base-logo-size);
 
-  --card-img-h: 9rem;
+  --card-img-h: 9rem; /* was 8.25rem */
   --card-img-w: calc(0.5 * (var(--card-img-h) + 0.125));
-  --500px-addition: 6rem;
-  --800px-addition: 12rem;
-  --1600px-addition: 20rem;
+  --500px-addition: 4rem; /* was 6rem */
+  --800px-addition: 8rem; /* was 12rem */
+  --1600px-addition: 16rem; /* was 20rem */
 }
 
 *,
